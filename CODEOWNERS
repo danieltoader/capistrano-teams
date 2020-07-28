@@ -1,0 +1,11 @@
+##########################################################
+#
+# List of approvers for danieltoader/capistrano-teams
+#
+##########################################################
+#
+# Learn about CODEOWNERS file format:
+#  https://help.github.com/en/articles/about-code-owners
+#
+
+* @danieltoader
