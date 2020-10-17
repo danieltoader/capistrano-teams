@@ -6,8 +6,6 @@ require 'capistrano/teams/message/types'
 
 module Capistrano
   module Teams
-    class Error < StandardError; end
-
     # Teams Webhook class
     class WebHook
       def notify(
