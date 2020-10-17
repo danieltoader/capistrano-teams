@@ -2,7 +2,7 @@
 
 [![Gem Downloads](http://img.shields.io/gem/dt/capistrano-teams.svg)](https://rubygems.org/gems/capistrano-teams)
 [![GitHub](https://img.shields.io/github/license/danieltoader/capistrano-teams?color=113399)](https://github.com/danieltoader/capistrano-teams/blob/master/LICENSE.md)
-[![Changelog](https://img.shields.io/badge/capistrano-capistran--teams-E05735)](https://github.com/danieltoader/capistrano-teams/blob/master/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/log-capistrano--teams-E05735)](https://github.com/danieltoader/capistrano-teams/blob/master/CHANGELOG.md)
 [![Gem Version](http://img.shields.io/gem/v/capistrano-teams.svg)](https://rubygems.org/gems/capistrano-teams)
 [![Build Status](http://img.shields.io/travis/danieltoader/capistrano-teams.svg)](http://travis-ci.org/danieltoader/capistrano-teams)
 [![Build status](https://ci.appveyor.com/api/projects/status/8e9dteu7ibxsb4ou?svg=true)](https://ci.appveyor.com/project/danieltoader/capistrano-teams)
@@ -116,6 +116,11 @@ Rake::Task["teams:notify"].execute(
 #### Remove default hooks for an action
 To remove a default hook from this plugin you can use the following line, it can be used
 anywhere in the desired `deploy.rb` or stage file
+```ruby
+Rake::Task['teams:deploy:starting'].clear_actions
+Rake::Task['teams:deploy:finishing'].clear_actions
+```
+OR
 ```ruby
 Rake::Task['deploy:starting'].prerequisites.delete('teams:deploy:starting')
 ```
