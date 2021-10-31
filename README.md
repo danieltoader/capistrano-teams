@@ -4,7 +4,7 @@
 [![GitHub](https://img.shields.io/github/license/danieltoader/capistrano-teams?color=113399)](https://github.com/danieltoader/capistrano-teams/blob/master/LICENSE.md)
 [![Changelog](https://img.shields.io/badge/log-capistrano--teams-E05735)](https://github.com/danieltoader/capistrano-teams/blob/master/CHANGELOG.md)
 [![Gem Version](http://img.shields.io/gem/v/capistrano-teams.svg)](https://rubygems.org/gems/capistrano-teams)
-[![Build Status](http://img.shields.io/travis/danieltoader/capistrano-teams.svg)](http://travis-ci.org/danieltoader/capistrano-teams)
+[![Build Status](https://app.travis-ci.com/danieltoader/capistrano-teams.svg?branch=master)](https://app.travis-ci.com/github/danieltoader/capistrano-teams)
 [![Build status](https://ci.appveyor.com/api/projects/status/8e9dteu7ibxsb4ou?svg=true)](https://ci.appveyor.com/project/danieltoader/capistrano-teams)
 [![Coverage Status](https://img.shields.io/coveralls/danieltoader/capistrano-teams.svg)](https://coveralls.io/r/danieltoader/capistrano-teams?branch=master)
 
@@ -58,7 +58,7 @@ stage file (staging.rb, production.rb, etc). The only required option is the `:t
 set :teams_webhook_url, "https://outlook.office.com/webhook/{groupId}@{tenantId}/IncomingWebhook/{connectorId}/{webHookId}"
 
 set :teams_suppress_events, false
-set :teams_content_mode, Message::TYPE_CARD
+set :teams_message_type, Message::TYPE_CARD
 set :teams_http_options, verify_mode: OpenSSL::SSL::VERIFY_PEER 
 ```
 
@@ -178,7 +178,7 @@ set :teams_card_message_markdown, true
 set :teams_webhook_url, "https://outlook.office.com/webhook/{groupId}@{tenantId}/IncomingWebhook/{connectorId}/{webHookId}"
 
 set :teams_suppress_events, false # Default value: false
-set :teams_content_mode, Message::TYPE_BASIC # Message::TYPE_BASIC or Message::TYPE_CARD
+set :teams_message_type, Message::TYPE_BASIC # Message::TYPE_BASIC or Message::TYPE_CARD
 set :teams_http_options, verify_mode: OpenSSL::SSL::VERIFY_PEER # Default verify mode
 
 # Theme colors
